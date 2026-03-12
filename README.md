@@ -32,6 +32,7 @@ GROUP BY order_items.product_id
 ORDER BY total_sales DESC
 LIMIT 10;
 ```
+```bash
             product_id            |    total_sales
 ----------------------------------+--------------------
  bb50f2e236e5eea0100680137654686c |              63885
@@ -45,6 +46,7 @@ LIMIT 10;
  53b36df67ebb7c41585e8d54d6772e08 |  37683.42000000013
  aca2eb7d00ea1a7b8ebd4e68314663af | 37608.900000000314
 (10 rows)
+``
 
 ## RECEITA POR MÊS
 ```sql
