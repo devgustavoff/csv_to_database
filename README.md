@@ -46,7 +46,7 @@ LIMIT 10;
  53b36df67ebb7c41585e8d54d6772e08 |  37683.42000000013
  aca2eb7d00ea1a7b8ebd4e68314663af | 37608.900000000314
 (10 rows)
-``
+```
 
 ## RECEITA POR MÊS
 ```sql
@@ -59,6 +59,7 @@ JOIN order_items ON orders.order_id = order_items.order_id
 GROUP BY year, month
 ORDER BY year, month;
 ```
+```bash
 year | month | total_month_revenue
 ------+-------+---------------------
  2016 |     9 |              267.36
@@ -85,7 +86,7 @@ year | month | total_month_revenue
  2018 |     7 |   895507.2200000084
  2018 |     8 |   854686.3300000079
  2018 |     9 |                 145
-
+```
  ## ESTADOS COM MAIS PEDIDOS
  ```sql
 SELECT
@@ -96,6 +97,7 @@ JOIN orders ON customers.customer_id = orders.customer_id
 GROUP BY customers.customer_state
 ORDER BY orders_total DESC;
 ```
+```bash
  customer_state | orders_total
 ----------------+--------------
  SP             |        41746
@@ -126,7 +128,7 @@ ORDER BY orders_total DESC;
  AP             |           68
  RR             |           46
 (27 rows)
-
+```
 ## TICKET MEDIO POR CATEGORIA
 ```sql
 SELECT
@@ -137,6 +139,7 @@ JOIN order_items ON products.product_id = order_items.product_id
 GROUP BY products.product_category_name
 ORDER BY avg_ticket DESC;
 ```
+```bash
              product_category_name              |     avg_ticket
 ------------------------------------------------+--------------------
  pcs                                            | 1098.3405418719212
@@ -213,7 +216,7 @@ ORDER BY avg_ticket DESC;
  fraldas_higiene                                |  40.19461538461539
  flores                                         |  33.63757575757575
  casa_conforto_2                                |  25.34233333333333
-
+```
 ## TAXA DE PEDIDOS ATRASADOS
 ```sql
 SELECT 
@@ -221,7 +224,9 @@ SELECT
     / COUNT(*)) * 100 AS late_order_rate
 FROM orders;
 ```
+```bash
     late_order_rate
 ------------------------
  7.87099888376021962800
 (1 row)
+```
