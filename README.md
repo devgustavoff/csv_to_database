@@ -1,5 +1,4 @@
 # csv_to_database
-O que o projeto faz — qual problema resolve, qual dataset usa
 ETL manual, pega alguns datasets do [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) limpa os arquivos csv tratando valores nulos criticos e tratando tipos de dados.
 
 # Como rodar
