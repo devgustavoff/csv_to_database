@@ -17,7 +17,7 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
-### 4. Rodar o pipeline
+### 4. Rodar a pipeline
 ```bash
 python main.py
 ```
