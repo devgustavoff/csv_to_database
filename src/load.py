@@ -1,9 +1,9 @@
 from sqlalchemy import create_engine
-import pandas as pd
+import os
 
 
 def load(data_frames):
-    engine = create_engine("postgresql://postgres:hakkjj97@localhost:5432/olist")
+    engine = create_engine(os.getenv("DB_URL"))
 
     data_frames['customers'].to_sql("customers", engine, if_exists='replace')
     data_frames['orders'].to_sql("orders", engine, if_exists='replace')
